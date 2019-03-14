@@ -1,0 +1,10 @@
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\bin\Debug\01-Data Access Layer.dll.config
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\bin\Debug\01-Data Access Layer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\bin\Debug\01-Data Access Layer.pdb
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\bin\Debug\EntityFramework.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\bin\Debug\EntityFramework.xml
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\obj\Debug\01-Data Access Layer.csprojResolveAssemblyReference.cache
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\obj\Debug\01-Data Access Layer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\01-Data Access Layer\obj\Debug\01-Data Access Layer.pdb

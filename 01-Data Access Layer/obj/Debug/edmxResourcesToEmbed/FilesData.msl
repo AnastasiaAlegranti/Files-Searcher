@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FilesDataModelStoreContainer" CdmEntityContainer="FilesDataEntities">
+    <EntitySetMapping Name="Results">
+      <EntityTypeMapping TypeName="FilesDataModel.Result">
+        <MappingFragment StoreEntitySet="Results">
+          <ScalarProperty Name="SearchResultID" ColumnName="SearchResultID" />
+          <ScalarProperty Name="StringToSearchID" ColumnName="StringToSearchID" />
+          <ScalarProperty Name="SearchResult" ColumnName="SearchResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Searches">
+      <EntityTypeMapping TypeName="FilesDataModel.Search">
+        <MappingFragment StoreEntitySet="Searches">
+          <ScalarProperty Name="StringToSearchID" ColumnName="StringToSearchID" />
+          <ScalarProperty Name="StringToSearch" ColumnName="StringToSearch" />
+          <ScalarProperty Name="RootFolder" ColumnName="RootFolder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,16 @@
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\04-User Interface.exe.config
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\04-User Interface.exe
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\04-User Interface.pdb
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\01-Data Access Layer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\02- Business Logic Layer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\03- Generate FilesData Library.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\EntityFramework.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\EntityFramework.SqlServer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\01-Data Access Layer.pdb
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\02- Business Logic Layer.pdb
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\03- Generate FilesData Library.pdb
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\EntityFramework.xml
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\bin\Debug\EntityFramework.SqlServer.xml
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\obj\Debug\04-User Interface.csprojResolveAssemblyReference.cache
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\obj\Debug\04-User Interface.exe
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\04-User Interface\obj\Debug\04-User Interface.pdb

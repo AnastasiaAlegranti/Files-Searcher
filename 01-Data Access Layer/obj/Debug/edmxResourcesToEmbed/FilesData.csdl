@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FilesDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Result">
+    <Key>
+      <PropertyRef Name="SearchResultID" />
+    </Key>
+    <Property Name="SearchResultID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StringToSearchID" Type="Int32" Nullable="false" />
+    <Property Name="SearchResult" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Results1" Relationship="Self.FK_Results_Results" FromRole="Results" ToRole="Results1" />
+    <NavigationProperty Name="Result1" Relationship="Self.FK_Results_Results" FromRole="Results1" ToRole="Results" />
+  </EntityType>
+  <EntityType Name="Search">
+    <Key>
+      <PropertyRef Name="StringToSearchID" />
+    </Key>
+    <Property Name="StringToSearchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StringToSearch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RootFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Results_Results">
+    <End Role="Results" Type="Self.Result" Multiplicity="1" />
+    <End Role="Results1" Type="Self.Result" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Results">
+        <PropertyRef Name="SearchResultID" />
+      </Principal>
+      <Dependent Role="Results1">
+        <PropertyRef Name="SearchResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FilesDataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Results" EntityType="Self.Result" />
+    <EntitySet Name="Searches" EntityType="Self.Search" />
+    <AssociationSet Name="FK_Results_Results" Association="Self.FK_Results_Results">
+      <End Role="Results" EntitySet="Results" />
+      <End Role="Results1" EntitySet="Results" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

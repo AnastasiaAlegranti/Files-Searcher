@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FilesDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Results">
+          <Key>
+            <PropertyRef Name="SearchResultID" />
+          </Key>
+          <Property Name="SearchResultID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StringToSearchID" Type="int" Nullable="false" />
+          <Property Name="SearchResult" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Searches">
+          <Key>
+            <PropertyRef Name="StringToSearchID" />
+          </Key>
+          <Property Name="StringToSearchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StringToSearch" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="RootFolder" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_Results_Results">
+          <End Role="Results" Type="Self.Results" Multiplicity="1" />
+          <End Role="Results1" Type="Self.Results" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Results">
+              <PropertyRef Name="SearchResultID" />
+            </Principal>
+            <Dependent Role="Results1">
+              <PropertyRef Name="SearchResultID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FilesDataModelStoreContainer">
+          <EntitySet Name="Results" EntityType="Self.Results" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Searches" EntityType="Self.Searches" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Results_Results" Association="Self.FK_Results_Results">
+            <End Role="Results" EntitySet="Results" />
+            <End Role="Results1" EntitySet="Results" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FilesDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Result">
+          <Key>
+            <PropertyRef Name="SearchResultID" />
+          </Key>
+          <Property Name="SearchResultID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StringToSearchID" Type="Int32" Nullable="false" />
+          <Property Name="SearchResult" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Results1" Relationship="Self.FK_Results_Results" FromRole="Results" ToRole="Results1" />
+          <NavigationProperty Name="Result1" Relationship="Self.FK_Results_Results" FromRole="Results1" ToRole="Results" />
+        </EntityType>
+        <EntityType Name="Search">
+          <Key>
+            <PropertyRef Name="StringToSearchID" />
+          </Key>
+          <Property Name="StringToSearchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StringToSearch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RootFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Results_Results">
+          <End Role="Results" Type="Self.Result" Multiplicity="1" />
+          <End Role="Results1" Type="Self.Result" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Results">
+              <PropertyRef Name="SearchResultID" />
+            </Principal>
+            <Dependent Role="Results1">
+              <PropertyRef Name="SearchResultID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FilesDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Results" EntityType="Self.Result" />
+          <EntitySet Name="Searches" EntityType="Self.Search" />
+          <AssociationSet Name="FK_Results_Results" Association="Self.FK_Results_Results">
+            <End Role="Results" EntitySet="Results" />
+            <End Role="Results1" EntitySet="Results" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FilesDataModelStoreContainer" CdmEntityContainer="FilesDataEntities">
+          <EntitySetMapping Name="Results">
+            <EntityTypeMapping TypeName="FilesDataModel.Result">
+              <MappingFragment StoreEntitySet="Results">
+                <ScalarProperty Name="SearchResultID" ColumnName="SearchResultID" />
+                <ScalarProperty Name="StringToSearchID" ColumnName="StringToSearchID" />
+                <ScalarProperty Name="SearchResult" ColumnName="SearchResult" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Searches">
+            <EntityTypeMapping TypeName="FilesDataModel.Search">
+              <MappingFragment StoreEntitySet="Searches">
+                <ScalarProperty Name="StringToSearchID" ColumnName="StringToSearchID" />
+                <ScalarProperty Name="StringToSearch" ColumnName="StringToSearch" />
+                <ScalarProperty Name="RootFolder" ColumnName="RootFolder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,12 @@
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\bin\Debug\02- Business Logic Layer.dll.config
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\bin\Debug\02- Business Logic Layer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\bin\Debug\02- Business Logic Layer.pdb
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\bin\Debug\01-Data Access Layer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\bin\Debug\01-Data Access Layer.pdb
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\obj\Debug\02- Business Logic Layer.csprojResolveAssemblyReference.cache
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\obj\Debug\02- Business Logic Layer.dll
+E:\המסמכים שלי\תכנות\תיק עבודות\FilesSearcher System\02- Business Logic Layer\obj\Debug\02- Business Logic Layer.pdb
